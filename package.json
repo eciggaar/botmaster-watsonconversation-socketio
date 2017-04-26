@@ -14,6 +14,10 @@
     "node": "^6.9.5",
     "npm": "^3.10.10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eciggaar/botmaster-watsonconversation-socketio.git"
+  },
   "dependencies": {
     "express": "^4.15.2",
     "botmaster": "^3.0.8",
