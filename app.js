@@ -22,6 +22,9 @@ const express = require('express');
 const app = express();
 const config = require('./config');
 
+// Deployment tracking
+require('cf-deployment-tracker-client').track();
+
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
@@ -84,6 +87,3 @@ botmaster.use({
 
 // Catch errors and log them
 botmaster.on('error', (bot, err) => { console.log(err.stack); });
-
-// Deployment tracking
-require('cf-deployment-tracker-client').track();
