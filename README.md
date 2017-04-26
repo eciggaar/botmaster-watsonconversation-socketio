@@ -1,4 +1,7 @@
 # Getting started chatbot using Watson Conversation and the Botmaster framework
+![Bluemix Deployments](https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/badge.svg)
+<br>
+<br>
 <div align="center">
 Powered by <img src="http://botmasterai.com/documentation/latest/images/botmaster_light.svg" width="100"/>
 </div>
@@ -19,8 +22,8 @@ Botmaster is a lightweight highly extendable, highly configurable chatbot framew
 If you wish to simply deploy a Botmaster instance without having to edit any of the pre-existing code, or when you do not wish to connect any additional API or additional functionality, use the steps below.
 
 1. In order to setup Botmaster and a webhook for messenger to link to your Watson Conversation instance we first need to deploy a Bluemix application. For this, click the "Deploy to Bluemix" button below.
-<div align="center">
-<a href="https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git" # [required]><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a></div>
+
+  [![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg)](https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git)
 
 2. Log into Bluemix.
 3. Give your application a unique name. This will be the URL for the base of your webhook.
