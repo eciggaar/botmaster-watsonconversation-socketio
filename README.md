@@ -77,11 +77,11 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
 Once the application successfully restarted, click the application URL to view your app. You should see a page similar to
 
-  ![bot-socketio](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio.png?raw=true)
+![bot-socketio](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio.png?raw=true)
 
-Did you see this page? Well, congratulations!! :smiley: You can now continue to fine-tune your conversation by adding more intents, define entities and further extend the dialog.
+Did you see this page? Well, congratulations!! :smiley: You can now continue to fine-tune your conversation by adding more intents, define entities and include these in your dialog.
 
-We encourage you to define your own intents and entities now and include these in your dialog. If you are looking for more inspiration, check out the [conversation tutorial](CONVERSATION.md).
+If, however, you are looking for more inspiration, check out the [conversation tutorial](CONVERSATION.md).
 
 ## Exporting Your Conversation
 
@@ -100,7 +100,11 @@ Follow the steps below to export your conversation in the raw .json format to sh
 ## Connecting Third Party API
 Botmaster supports Third party API integration to enable the conversation of your bot to be enriched. Within the `weather.js` middleware file you will see a pre-included Weather API that makes use of IBM Weather Company Data.
 
-This sample code is able to be adapted to call any API function that returns a .json response. This is outputted as a message to the user within the specified channel.
+This sample code is able to be adapted to call any API function that returns a .json response. This can be outputted as a message to the user within the specified channel.
+
+To see what weather information is currently included, open the application URL and `debug.html` to it. This will open a debug view and looks like:
+
+![bot-socketio-debug](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio-debug.png?raw=true)
 
 ## License
 
@@ -119,7 +123,7 @@ This data is collected from the `VCAP_APPLICATION` environment variable in IBM B
 
 ### Disabling Deployment Tracking
 
-Deployment tracking can be disabled by removing `require('cf-deployment-tracker-client').track();` from the beginning of the `server.js` file at the root of this repo.
+Deployment tracking can be disabled by removing `require('cf-deployment-tracker-client').track();` from the beginning of the `app.js` file at the root of this repo.
 
 ## Additional Links
 
