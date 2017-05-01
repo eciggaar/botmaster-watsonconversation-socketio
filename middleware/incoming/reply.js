@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 const watson = require('watson-developer-cloud');
 const config = require('../../config');
 const watsonConversationStorageMiddleware = require('../watson_conversation_storage');
@@ -33,9 +33,14 @@ const replyToUser = {
     };
 
     watsonConversation.message(messageForWatson, (err, watsonUpdate) => {
-        watsonConversationStorageMiddleware.updateSession(update.sender.id, watsonUpdate);
-        const watsontext = watsonUpdate.output.text;
-        bot.sendTextCascadeTo(watsontext, update.sender.id);
+        if (err) {
+          bot.sendTextCascadeTo(['Welcome! To complete the setup, follow the steps in the README.md to create your own workspace and link it to this application.',
+                                'Have fun!!'], update.sender.id);
+        } else {
+          watsonConversationStorageMiddleware.updateSession(update.sender.id, watsonUpdate);
+          const watsontext = watsonUpdate.output.text;
+          bot.sendTextCascadeTo(watsontext, update.sender.id);
+        }
     });
 
     next();
