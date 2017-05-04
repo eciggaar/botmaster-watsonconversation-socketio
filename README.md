@@ -9,7 +9,7 @@ Botmaster is a lightweight highly extendable, highly configurable chatbot framew
 
 * Create a Bluemix account
 
-    * [Sign Up](https://bluemix.net/registration) in Bluemix, or use an existing account. Your account must have available space for at least 1 application (256MB) and 1 service.
+    * [Sign Up](https://developer.ibm.com/sso/bmregistration) in Bluemix, or use an existing account. Your account must have available space for at least 1 application (256MB) and 2 services.
 
 The following steps are optional.
 
@@ -28,31 +28,31 @@ The following steps are optional.
 
 3. Give your Toolchain a unique name. This will also be the name of your application and it will form the base of your application URL.
 
-  ![Name your application](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bluemixname.png?raw=true)
+  ![Name your application][1]
 
 4. Select the "Delivery Pipeline" icon and choose your region, organization and space to deploy to.
 
-  ![Select region](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/region.png?raw=true)
+  ![Select region][2]
 
 5. Once successfully deployed, you will be presented with this screen. Now you can click "View app" to see the bot's user interface.
 
-  ![Success deployment](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/success.png?raw=true)
+  ![Success deployment][3]
 
 ## Step 1: Import your workspace
 
 To make life a bit easier for you, we've included a sample workspace to give you a jump-start with your own workspace. The steps below describe how to import this workspace and how to link this to the application.
 
-1. Open the [contents](https://raw.githubusercontent.com/eciggaar/botmaster-watsonconversation-socketio/master/resources/demo-workspace-socketio.json) of the sample workspace JSON file in a separate tab. Select the contents of the page and save it to a file on your own device.
+1. Open the [contents][4] of the sample workspace JSON file in a separate tab. Select the contents of the page and save it to a file on your own device.
 
-  ![Create workspace](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/create-workspace.png?raw=true)
+  ![Create workspace][5]
 
 2. Open your Bluemix application [dashboard](https://console.ng.bluemix.net) and select the `conversation-service-socketio` that was created for you during the deployment process. Click on "Launch tool" to open the Watson Conversation Tooling. You might need to switch region and/or space to match the selection you've made in Step 4 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix)
 
-  ![Launch tool](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/launch.png?raw=true)
+  ![Launch tool][6]
 
 3. Click the import button and upload the workspace JSON file that you created in Step 1.
 
-  ![Import JSON](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/import-json.png?raw=true)
+  ![Import JSON][7]
 
 ## Step 2: Obtain the workspace ID and link it to your app
 
@@ -60,17 +60,17 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
 2. Next, click the actions (3 dots) of the 'Demo Workspace' tile and select 'View Details'.
 
-  ![Get workspace ID](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/workspaceid.png?raw=true)
+  ![Get workspace ID][8]
 
 3. Copy the workspace ID to your clipboard.
 
 4. Open your Bluemix app dashboard and select the application that was deployed for you in Step 1 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix).
 
-  ![Success deployment](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/select-app.png?raw=true)
+  ![Success deployment][9]
 
 5. Select 'Runtime' followed by 'Environment Variables'.
 
-  ![Success deployment](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/envvar.png?raw=true)
+  ![Success deployment][10]
 
 6. Paste the workspace ID from your clipboard as value of the variable `WATSON_WORKSPACE_ID`. Click 'Save' to apply the changes.
 
@@ -78,7 +78,7 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
 Once the application successfully restarted, click the application URL to view your app. You should see a page similar to
 
-![bot-socketio](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio.png?raw=true)
+![bot-socketio][11]
 
 Did you see this page? Well, congratulations!! :smiley: You can now continue to fine-tune your conversation by adding more intents, define entities and include these in your dialog.
 
@@ -105,7 +105,7 @@ This sample code is able to be adapted to call any API function that returns a .
 
 To see what weather information is currently included, open the application URL and append `debug.html` to it. This will open a debug view and looks like:
 
-![bot-socketio-debug](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio-debug.png?raw=true)
+![bot-socketio-debug][12]
 
 ## License
 
@@ -130,3 +130,16 @@ Deployment tracking can be disabled by removing `require('cf-deployment-tracker-
 
 * Botmaster Documentation : [Botmaster Documentation](http://botmasterai.com/)
 * Watson Conversation Documentation : [Watson Conversation](http://www.ibm.com/watson/developercloud/doc/conversation/index.html)
+
+[1]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bluemixname.png?raw=true
+[2]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/region.png?raw=true
+[3]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/success.png?raw=true
+[4]: https://raw.githubusercontent.com/eciggaar/botmaster-watsonconversation-socketio/master/resources/demo-workspace-socketio.json
+[5]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/create-workspace.png?raw=true
+[6]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/launch.png?raw=true
+[7]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/import-json.png?raw=true
+[8]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/workspaceid.png?raw=true
+[9]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/select-app.png?raw=true
+[10]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/envvar.png?raw=true
+[11]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio.png?raw=true
+[12]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio-debug.png?raw=true
