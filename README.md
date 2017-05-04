@@ -20,11 +20,9 @@ The following steps are optional.
 
 ## Getting Started with Botmaster on Bluemix
 
-1. To get your own copy of the sample application that integrates with Watson Conversation and exposes its responses via socket.io, click the "Deploy to Bluemix" button.
+1. To get your own copy of the sample application that integrates with Watson Conversation and exposes its responses via socket.io, click the **Deploy to Bluemix** button. Open this link in a new tab by right-clicking it.
 
-  <a href="https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git" target="_blank">
-    <img src="https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg">
-  </a>
+  [![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg)](https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git)
 
 2. Log into Bluemix.
 
@@ -32,11 +30,11 @@ The following steps are optional.
 
   ![Name your application][1]
 
-4. Select the "Delivery Pipeline" icon and choose your region, organization and space to deploy to.
+4. Select the **Delivery Pipeline** icon and choose your region, organization and space to deploy to.
 
   ![Select region][2]
 
-5. Once successfully deployed, you will be presented with this screen. Now you can click "View app" to see the bot's user interface.
+5. Once successfully deployed, you will be presented with this screen. Now you can click **View app** to see the bot's user interface.
 
   ![Success deployment][3]
 
@@ -48,7 +46,7 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
   ![Create workspace][5]
 
-2. Open your Bluemix application [dashboard](https://console.ng.bluemix.net) and select the `conversation-service-socketio` that was created for you during the deployment process. Click on "Launch tool" to open the Watson Conversation Tooling. You might need to switch region and/or space to match the selection you've made in Step 4 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix)
+2. Open your Bluemix application [dashboard](https://console.ng.bluemix.net) and select the `conversation-service-socketio` that was created for you during the deployment process. Click on **Launch tool** to open the Watson Conversation Tooling. You might need to switch region and/or space to match the selection you've made in Step 4 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix)
 
   ![Launch tool][6]
 
@@ -60,7 +58,7 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
 1. Make sure the Watson Conversation Tooling is opened and that the workspaces overview page is active. If not, follow Step 2 in the section above to open the tooling page.
 
-2. Next, click the actions (3 dots) of the 'Demo Workspace' tile and select 'View Details'.
+2. Next, click the actions (3 dots) of the `Demo Workspace` tile and select **View Details**.
 
   ![Get workspace ID][8]
 
@@ -70,11 +68,11 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
   ![Success deployment][9]
 
-5. Select 'Runtime' followed by 'Environment Variables'.
+5. Select **Runtime** followed by **Environment Variables**.
 
   ![Success deployment][10]
 
-6. Paste the workspace ID from your clipboard as value of the variable `WATSON_WORKSPACE_ID`. Click 'Save' to apply the changes.
+6. Paste the workspace ID from your clipboard as value of the variable `WATSON_WORKSPACE_ID`. Click **Save** to apply the changes.
 
 ## Step 3: Enhance the conversation
 
@@ -96,14 +94,14 @@ Follow the steps below to export your conversation in the raw .json format to sh
 
 3. Within your conversation service locate your workspace.
 
-4. Use the menu in the top right of your workspace and click "Download as JSON".
+4. Use the menu in the top right of your workspace and click **Download as JSON**.
 
   <img src="https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/instance.png?raw=true" width="350px">
 
 ## Connecting Third Party API
-Botmaster supports Third party API integration to enable the conversation of your bot to be enriched. Within the `weather.js` middleware file you will see a pre-included Weather API that makes use of IBM Weather Company Data.
+Botmaster supports Third party API integration to enrich the conversation of your bot. Within the `weather.js` middleware file you will see a pre-included Weather API that makes use of IBM Weather Company Data.
 
-This sample code is able to be adapted to call any API function that returns a .json response. This can be outputted as a message to the user within the specified channel.
+This sample code is able to be adapted to call any API function that returns a JSON response. This can be outputted as a message to the user within the specified channel.
 
 To see what weather information is currently included, open the application URL and append `debug.html` to it. This will open a debug view and looks like:
 
