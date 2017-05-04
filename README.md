@@ -22,7 +22,9 @@ The following steps are optional.
 
 1. To get your own copy of the sample application that integrates with Watson Conversation and exposes its responses via socket.io, click the "Deploy to Bluemix" button.
 
-  [![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg)](https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git)
+  <a href="https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git" target="_blank">
+    <img src="https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg">
+  </a>
 
 2. Log into Bluemix.
 
