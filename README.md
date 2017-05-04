@@ -9,7 +9,7 @@ Botmaster is a lightweight highly extendable, highly configurable chatbot framew
 
 * Create a Bluemix account
 
-    * [Sign Up](https://developer.ibm.com/sso/bmregistration) in Bluemix, or use an existing account. Your account must have available space for at least 1 application (256MB) and 2 services.
+    * [Sign Up](https://developer.ibm.com/sso/bmregistration) in Bluemix, or use an existing account. Your account must have available space for at least 1 application (256MB) and 3 services.
 
 The following steps are optional.
 
