@@ -82,7 +82,7 @@ Once the application successfully restarted, click the application URL to view y
 
 Did you see this page? Well, congratulations!! :smiley: You can now continue to fine-tune your conversation by adding more intents, define entities and include these in your dialog.
 
-If, however, you are looking for more inspiration, check out the [conversation tutorial](CONVERSATION.md).
+Check out the [Conversation tutorial](CONVERSATION.md) for more details. Feel free to define your own intents and entities to include in your dialog.
 
 ## Exporting Your Conversation
 
