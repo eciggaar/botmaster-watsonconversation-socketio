@@ -20,7 +20,7 @@ The following steps are optional.
 
 ## Getting Started with Botmaster on Bluemix
 
-1. To get your own copy of the sample application that integrates with Watson Conversation and exposes its responses via socket.io, click the **Deploy to Bluemix** button. Open this link in a new tab by right-clicking it.
+1. To get your own copy of the sample application that integrates with Watson Conversation and exposes its responses via socket.io, click the **Deploy to Bluemix** button. Open this link in a new tab by right-clicking the button below and select **Open Link in New Tab**.
 
   [![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg)](https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git)
 
