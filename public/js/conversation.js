@@ -21,7 +21,7 @@
 
 var socket = io('?botmasterUserId=testUser');
 var initial = true;
-//var hello = {'message':{'text':'hello'}};
+var hello = {'message':{'text':'hello'}};
 
 var settings = {
   selectors: {
@@ -51,7 +51,7 @@ var ConversationPanel = (function() {
   // Initialize the module
   function init() {
     // send init message to trigger welcome message.
-    //socket.send(hello);
+    socket.send(hello);
     initial = false;
   }
 
