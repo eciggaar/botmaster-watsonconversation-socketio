@@ -8,6 +8,7 @@ Botmaster is a lightweight highly extendable, highly configurable chatbot framew
 ## Before you begin
 
 * Create a Bluemix account
+
     * [Sign Up](https://bluemix.net/registration) in Bluemix, or use an existing account. Your account must have available space for at least 1 application (256MB) and 1 service.
 
 The following steps are optional.
@@ -102,7 +103,7 @@ Botmaster supports Third party API integration to enable the conversation of you
 
 This sample code is able to be adapted to call any API function that returns a .json response. This can be outputted as a message to the user within the specified channel.
 
-To see what weather information is currently included, open the application URL and `debug.html` to it. This will open a debug view and looks like:
+To see what weather information is currently included, open the application URL and append `debug.html` to it. This will open a debug view and looks like:
 
 ![bot-socketio-debug](https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/bot-socketio-debug.png?raw=true)
 
