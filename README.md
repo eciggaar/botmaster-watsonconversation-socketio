@@ -42,7 +42,7 @@ The following steps are optional.
 
 To make life a bit easier for you, we've included a sample workspace to give you a jump-start with your own workspace. The steps below describe how to import this workspace and how to link this to the application.
 
-1. Open the <a download="demo-workspace.json" href="/resources/demo-workspace-socketio.json" title="ImageName">contents</a> of the sample workspace JSON file in a separate tab. Select the contents of the page and save it to a file on your own device.
+1. Open the <a href="/resources/demo-workspace-socketio.json" download="demo-workspace.json">contents</a> of the sample workspace JSON file in a separate tab. Select the contents of the page and save it to a file on your own device.
 
   ![Create workspace][5]
 
