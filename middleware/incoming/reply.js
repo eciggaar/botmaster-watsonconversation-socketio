@@ -23,6 +23,9 @@ const replyToUser = {
   type: 'incoming',
   name: 'reply-to-user',
   controller: (bot, update, next) => {
+    watsonConversation.listWorkspaces( (err, watsonWorkspaces) => {
+      console.log(JSON.stringify(watsonWorkspaces));
+    });
 
     const messageForWatson = {
         context: update.session.context,

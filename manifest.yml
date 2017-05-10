@@ -1,9 +1,9 @@
 ---
 declared-services:
-  conversation-service-socketio:
+  conversation-service:
     label: conversation
     plan: free
-  weather-service-socketio:
+  weather-service:
     label: weatherinsights
     plan: Free-v2
 applications:
@@ -13,8 +13,8 @@ applications:
   name: watson-botmaster-socketio
   disk_quota: 512M
   services:
-  - conversation-service-socketio
-  - weather-service-socketio
+  - conversation-service
+  - weather-service
   env:
     SOCKETIO_BOT_ID: <your_socketio_bot_id>
     WATSON_WORKSPACE_ID: <your_workspace_id>

@@ -33,17 +33,17 @@ const secretBotId = process.env.SOCKETIO_BOT_ID;
 
 // Settings for Watson conversation service
 const watsonConversationCredentials = {
-    username: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_USERNAME : appEnv.getServiceCreds('conversation-service-socketio').username,
-    password: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_PASSWORD : appEnv.getServiceCreds('conversation-service-socketio').password,
+    username: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_USERNAME : appEnv.getServiceCreds('conversation-service').username,
+    password: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_PASSWORD : appEnv.getServiceCreds('conversation-service').password,
     version: 'v1',
     version_date: '2017-02-03',
 };
 
 // Settings for IBM Weather Company Data service
 const weatherCredentials = {
-    username: (appEnv.isLocal) ? process.env.WEATHER_USERNAME : appEnv.getServiceCreds('weather-service-socketio').username,
-    password: (appEnv.isLocal) ? process.env.WEATHER_PASSWORD : appEnv.getServiceCreds('weather-service-socketio').password,
-    host: (appEnv.isLocal) ? process.env.WEATHER_HOST : appEnv.getServiceCreds('weather-service-socketio').host
+    username: (appEnv.isLocal) ? process.env.WEATHER_USERNAME : appEnv.getServiceCreds('weather-service').username,
+    password: (appEnv.isLocal) ? process.env.WEATHER_PASSWORD : appEnv.getServiceCreds('weather-service').password,
+    host: (appEnv.isLocal) ? process.env.WEATHER_HOST : appEnv.getServiceCreds('weather-service').host
 };
 
 module.exports = {

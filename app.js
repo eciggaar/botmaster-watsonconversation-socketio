@@ -80,7 +80,6 @@ botmaster.use({
     // message will now be of type OutgoingMessage
     watsonConversationStorageMiddleware.retrieveSession(bot, update, next);
     message.session = update.session;
-    //console.log(JSON.stringify(message,null,2));
     next();
   }
 });
