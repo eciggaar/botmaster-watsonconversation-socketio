@@ -39,7 +39,7 @@ The `@appliance` entity represents an appliance in the car that a user might wan
 
     * Value: `headlights`. Synonym: `lights`.
 
-    * Value: `air conditioning`. Synonyms: `air`.
+    * Value: `air conditioning`. Synonyms: `air` and `airco`.
 
   Click **Create** when finished.
 
