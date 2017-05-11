@@ -24,7 +24,7 @@ The following steps are optional.
 
   [![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg)](https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git)
 
-2. Log into Bluemix.
+2. Login to Bluemix.
 
 3. Give your Toolchain a unique name. This will also be the name of your application and it will form the base of your application URL.
 
@@ -42,11 +42,11 @@ The following steps are optional.
 
 To make life a bit easier for you, we've included a sample workspace to give you a jump-start with your own workspace. The steps below describe how to import this workspace and how to link this to the application.
 
-1. Open the <a href="https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/resources/demo-workspace-socketio.json" download="demo-workspace.json" target="_blank">contents</a> of the sample workspace JSON file in a separate tab. Select the contents of the page and save it to a file on your own device.
+1. Use Ctrl-click (or the equivalent action for your system) to open the <a href="https://ibm.box.com/v/demo-workspace" target=download>sample workspace</a> JSON file in a separate tab. Click **Download** to download this file to your own device.
 
-  ![Create workspace][5]
+  ![Download workspace][5]
 
-2. Open your Bluemix application [dashboard](https://console.ng.bluemix.net) and select the `conversation-service-socketio` that was created for you during the deployment process. Click on **Launch tool** to open the Watson Conversation Tooling. You might need to switch region and/or space to match the selection you've made in Step 4 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix)
+2. Open your Bluemix application [dashboard](https://console.ng.bluemix.net) and select the `conversation-service` that was created for you during the deployment process. Click on **Launch tool** to open the Watson Conversation Tooling. You might need to switch region and/or space to match the selection you've made in Step 4 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix)
 
   ![Launch tool][6]
 
@@ -135,7 +135,7 @@ Deployment tracking can be disabled by removing `require('cf-deployment-tracker-
 [2]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/region.png?raw=true
 [3]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/success.png?raw=true
 [4]: https://raw.githubusercontent.com/eciggaar/botmaster-watsonconversation-socketio/master/resources/demo-workspace-socketio.json
-[5]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/create-workspace.png?raw=true
+[5]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/download.png?raw=true
 [6]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/launch.png?raw=true
 [7]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/import-json.png?raw=true
 [8]: https://github.com/eciggaar/botmaster-watsonconversation-socketio/blob/master/readmeimages/workspaceid.png?raw=true
