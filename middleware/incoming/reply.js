@@ -19,23 +19,40 @@ const config = require('../../config');
 const watsonConversationStorageMiddleware = require('../watson_conversation_storage');
 const watsonConversation = watson.conversation(config.watsonConversationCredentials);
 
-let workspaceId = '';
+let workspaceId = process.env.WATSON_WORKSPACE_ID;
 let workspaceFound = false;
+
+// First check whether the conversation service has a workspace with an UUID that is defined
+// as WATSON_WORKSPACE_ID environment variable.
+watsonConversation.getWorkspace( {workspace_id: workspaceId}, (err, watsonWorkspace) => {
+  if (!err) {
+    console.log('Getting workspace via env variable...');
+    console.log('The following workspace is used....');
+    console.log('  * name : \"' + watsonWorkspace.name + '\"');
+    console.log('  * id   : \"' + workspaceId + '\"');
+
+    workspaceFound = true;
+  } else {
+    console.log(err.error);
+    console.log('Obtaining the first defined workspace in the conversation service...');
+  }
+});
 
 const replyToUser = {
   type: 'incoming',
   name: 'reply-to-user',
   controller: (bot, update, next) => {
 
-    // By default picks the first workspace that is found in the list...
-    // Then a boolean is set to true so that this API call is called only once
+    // In case there is no workspace found with UUID equal to the environment variable
+    // WATSON_WORKSPACE_ID, list all workspaces and set the workspace id to the first one
+    // found.
     if (!workspaceFound) {
       watsonConversation.listWorkspaces( (err, watsonWorkspaces) => {
         if (!err && watsonWorkspaces.workspaces[0]) {
           workspaceId = watsonWorkspaces.workspaces[0].workspace_id;
-          console.log('Workspace ID being used....: ' + workspaceId);
-        } else { // In case of error or empty list
-          workspaceId = process.env.WATSON_WORKSPACE_ID;
+          console.log('The following workspace is used....');
+          console.log('  * name : \"' + watsonWorkspaces.workspaces[0].name + '\"');
+          console.log('  * id   : \"' + workspaceId + '\"');
         }
 
         workspaceFound = true;
