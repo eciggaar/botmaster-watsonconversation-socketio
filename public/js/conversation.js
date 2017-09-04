@@ -19,7 +19,7 @@
 // this only works because the socket.io library assumes with this syntax that the socket.io server
 // lives at the same address as the server that served this page (this should mostly be your case)
 
-var socket = io('?botmasterUserId=testUser');
+var socket = io();
 var initial = true;
 var hello = {'message':{'text':'hello'}};
 
