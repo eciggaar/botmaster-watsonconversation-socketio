@@ -40,10 +40,15 @@ const watsonConversationCredentials = {
 };
 
 // Settings for IBM Weather Company Data service
-const weatherCredentials = {
+/*const weatherCredentials = {
     username: (appEnv.isLocal) ? process.env.WEATHER_USERNAME : appEnv.getServiceCreds('weather-service').username,
     password: (appEnv.isLocal) ? process.env.WEATHER_PASSWORD : appEnv.getServiceCreds('weather-service').password,
     host: (appEnv.isLocal) ? process.env.WEATHER_HOST : appEnv.getServiceCreds('weather-service').host
+};*/
+
+// Settings for IBM Weather Company Data service
+const weatherCredentials = {
+    host: (appEnv.isLocal) ? process.env.WEATHER_HOST : 'weatherapi.eu-gb.mybluemix.net'
 };
 
 module.exports = {

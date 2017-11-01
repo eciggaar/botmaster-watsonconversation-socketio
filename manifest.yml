@@ -14,7 +14,6 @@ applications:
   disk_quota: 512M
   services:
   - conversation-service
-  - weather-service
   env:
     SOCKETIO_BOT_ID: <your_socketio_bot_id>
     WATSON_WORKSPACE_ID: <your_workspace_id>

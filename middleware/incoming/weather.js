@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 const request = require('request-promise');
 const config = require('../../config');
 
@@ -23,15 +23,16 @@ const addWeatherInfoToUpdate = {
   controller: (bot, update, next) => {
 
     let weatherUrl = config.weatherCredentials.host;
-    weatherUrl = 'https://' + weatherUrl + '/api/weather/v1/geocode/52.34/4.83/forecast/daily/3day.json?units=m';
+    //weatherUrl = 'https://' + weatherUrl + '/api/weather/v1/geocode/52.34/4.83/forecast/daily/3day.json?units=m';
+    weatherUrl = 'https://' + weatherUrl + '/api/weatherinfo';
 
     const requestOptions = {
         // Get daily forcasts for the next three days based for the location Amsterdam
         url: weatherUrl,
-        auth: {
+        /*auth: {
             user: config.weatherCredentials.username,
             pass: config.weatherCredentials.password
-        },
+        },*/
         json: true,
     }
 
