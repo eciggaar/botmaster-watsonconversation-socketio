@@ -36,7 +36,7 @@ const watsonConversationCredentials = {
     username: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_USERNAME : appEnv.getServiceCreds('conversation-service').username,
     password: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_PASSWORD : appEnv.getServiceCreds('conversation-service').password,
     version: 'v1',
-    version_date: '2017-02-03',
+    version_date: '2017-05-26',
 };
 
 // Settings for IBM Weather Company Data service
