@@ -7,24 +7,24 @@ Botmaster is a lightweight highly extendable, highly configurable chatbot framew
 
 ## Before you begin
 
-* Create a Bluemix account
+* Create an IBM Cloud account
 
-    * [Sign Up](https://developer.ibm.com/sso/bmregistration) in Bluemix, or use an existing account. Your account must have available space for at least 1 application (256MB) and 3 services.
+    * [Sign Up](https://developer.ibm.com/sso/bmregistration) in IBM Cloud, or use an existing account. Your account must have available space for at least 1 application (256MB) and 3 services.
 
 The following steps are optional.
 
 * When you plan to run your bot locally, make sure you have the following prerequisites installed:
 
     * [The Node.js runtime](https://nodejs.org/en/) (including the npm package manager)
-    * [The Cloud Foundry and Bluemix](https://console.ng.bluemix.net/docs/cli/index.html#cli) command-line client is very useful.
+    * [The Cloud Foundry and IBM Cloud](https://console.ng.bluemix.net/docs/cli/index.html#cli) command-line client is very useful.
 
-## Getting Started with Botmaster on Bluemix
+## Getting Started with Botmaster on IBM Cloud
 
-1. To get your own copy of the sample application that integrates with Watson Conversation and exposes its responses via socket.io, click the **Deploy to Bluemix** button. Open this link in a new tab by right-clicking the button below and select **Open Link in New Tab**.
+1. To get your own copy of the sample application that integrates with Watson Conversation and exposes its responses via socket.io, click the **Deploy to IBM Cloud** button. Open this link in a new tab by right-clicking the button below and select **Open Link in New Tab**.
 
-  [![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/a3a41102a5d277cce1b65b7b1dc018e8/button.svg)](https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio.git)
+  [![Deploy to IBM Cloud](https://metrics-tracker.mybluemix.net/stats/cb0c3591b2baac93bf1de81cc6a0af72/button.svg)](https://bluemix.net/deploy?repository=https://github.com/eciggaar/botmaster-watsonconversation-socketio)
 
-2. Login to Bluemix.
+2. Login to IBM Cloud.
 
 3. Give your Toolchain a unique name. This will also be the name of your application and it will form the base of your application URL.
 
@@ -46,7 +46,7 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
   ![Download workspace][5]
 
-2. Open your Bluemix application [dashboard](https://console.ng.bluemix.net) and select the `conversation-service` that was created for you during the deployment process. Click on **Launch tool** to open the Watson Conversation Tooling. You might need to switch region and/or space to match the selection you've made in Step 4 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix)
+2. Open your IBM Cloud application [dashboard](https://console.ng.bluemix.net) and select the `conversation-service` that was created for you during the deployment process. Click on **Launch tool** to open the Watson Conversation Tooling. You might need to switch region and/or space to match the selection you've made in Step 4 of [Getting Started with Botmaster on IBM Cloud](#getting-started-with-botmaster-on-ibm-cloud)
 
   ![Launch tool][6]
 
@@ -64,7 +64,7 @@ To make life a bit easier for you, we've included a sample workspace to give you
 
 3. Copy the workspace ID to your clipboard.
 
-4. Open your Bluemix app dashboard and select the application that was deployed for you in Step 1 of [Getting Started with Botmaster on Bluemix](#getting-started-with-botmaster-on-bluemix).
+4. Open your dashboard and select the application that was deployed for you in Step 1 of [Getting Started with Botmaster on IBM Cloud](#getting-started-with-botmaster-on-ibm-cloud).
 
   ![Success deployment][9]
 
@@ -88,7 +88,7 @@ Check out the [Conversation tutorial](CONVERSATION.md) for more details. Feel fr
 
 Follow the steps below to export your conversation in the raw .json format to share with others or for backup.
 
-1. Log into Bluemix.
+1. Log into IBM Cloud.
 
 2. Locate your conversation service.
 
@@ -113,18 +113,24 @@ To see what weather information is currently included, open the application URL 
 
 ## Privacy Notice
 
-This node sample web application includes code to track deployments to Bluemix and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker][deploy_track_url] service on each deployment:
+If using the Deploy to IBM Cloud button some metrics are tracked, the following information is sent to a [Deployment Tracker](https://github.com/IBM/metrics-collector-service) service on each deployment:
 
+* Node.js package version
+* Node.js repository URL
 * Application Name (`application_name`)
+* Application GUID (`application_id`)
+* Application instance index number (`instance_index`)
 * Space ID (`space_id`)
 * Application Version (`application_version`)
 * Application URIs (`application_uris`)
+* Labels of bound services
+* Number of instances for each bound service and associated plan information
 
-This data is collected from the `VCAP_APPLICATION` environment variable in IBM Bluemix and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of sample applications to IBM Bluemix. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
+This data is collected from the `package.json` and `repository.yaml` file in the sample application and the ``VCAP_APPLICATION`` and ``VCAP_SERVICES`` environment variables in IBM Cloud and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of sample applications to IBM Cloud to measure the usefulness of our examples, so that we can continuously improve the content we offer to you. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
 
-### Disabling Deployment Tracking
+## Disabling Deployment Tracking
 
-Deployment tracking can be disabled by removing `require('cf-deployment-tracker-client').track();` from the beginning of the `app.js` file at the root of this repo.
+To disable tracking, simply remove ``require('metrics-tracker-client').track();`` from the ``app.js`` file in the top level directory.
 
 ## Additional Links
 
