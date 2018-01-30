@@ -23,7 +23,7 @@ const app = express();
 const config = require('./config');
 
 // Deployment tracking
-require('cf-deployment-tracker-client').track();
+require("metrics-tracker-client").track();
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));

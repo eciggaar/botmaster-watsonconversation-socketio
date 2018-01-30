@@ -1,0 +1,8 @@
+id: https://github.com/eciggaar/botmaster-watsonconversation-socketio
+runtimes:
+  - Cloud Foundry
+services:
+  - Conversation
+event_id: web
+event_organizer: dev-journeys
+language: nodejs
